@@ -1,0 +1,12 @@
+#!/bin/sh
+
+scp dcc cumulus@leaf0:~/dcc-pkg/
+scp dcc cumulus@leaf1:~/dcc-pkg/
+scp dcc cumulus@leaf2:~/dcc-pkg/
+scp dcc cumulus@leaf3:~/dcc-pkg/
+scp dcc cumulus@leaf4:~/dcc-pkg/
+scp dcc cumulus@leaf5:~/dcc-pkg/
+scp dcc cumulus@spine0:~/dcc-pkg/
+scp dcc cumulus@spine1:~/dcc-pkg/
+scp dcc cumulus@spine2:~/dcc-pkg/
+scp dcc cumulus@spine3:~/dcc-pkg/

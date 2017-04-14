@@ -1,0 +1,5 @@
+dcc for Debian
+
+dcc (deter cumulus controller) is a piece of software that operates a cumulus linux switch in a deter environment
+
+ -- Ryan Goodfellow <rgoodfel@isi.edu>  Sun, 10 Jul 2016 18:28:47 -0700

@@ -1,0 +1,563 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*.intf
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+auto eth0
+iface eth0 inet static
+  address 192.168.254.154
+  netmask 255.255.255.0
+  gateway 192.168.254.254
+  post-up route add -host 192.168.252.1 netmask 255.255.255.0 gw 192.168.254.254
+
+###
+### Uplink Trunks
+###
+
+auto swp9
+iface swp9
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp10
+iface swp10
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp11
+iface swp11
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp12
+iface swp12
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp13
+iface swp13
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp14
+iface swp14
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp15
+iface swp15
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp16
+iface swp16
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp17
+iface swp17
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp18
+iface swp18
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp19
+iface swp19
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp20
+iface swp20
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp21
+iface swp21
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp22
+iface swp22
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp23
+iface swp23
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp24
+iface swp24
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+
+###
+### Downlink Access
+###
+
+### 1-8 
+auto swp1s0
+iface swp1s0
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp1s1
+iface swp1s1
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp1s2
+iface swp1s2
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp1s3
+iface swp1s3
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+
+ 
+auto swp2s0
+iface swp2s0
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp2s1
+iface swp2s1
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp2s2
+iface swp2s2
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp2s3
+iface swp2s3
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+
+ 
+auto swp3s0
+iface swp3s0
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp3s1
+iface swp3s1
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp3s2
+iface swp3s2
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp3s3
+iface swp3s3
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+
+ 
+auto swp4s0
+iface swp4s0
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp4s1
+iface swp4s1
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp4s2
+iface swp4s2
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp4s3
+iface swp4s3
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+
+ 
+auto swp5s0
+iface swp5s0
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp5s1
+iface swp5s1
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp5s2
+iface swp5s2
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp5s3
+iface swp5s3
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+
+ 
+auto swp6s0
+iface swp6s0
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp6s1
+iface swp6s1
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp6s2
+iface swp6s2
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp6s3
+iface swp6s3
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+
+ 
+auto swp7s0
+iface swp7s0
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp7s1
+iface swp7s1
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp7s2
+iface swp7s2
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp7s3
+iface swp7s3
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+
+ 
+auto swp8s0
+iface swp8s0
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp8s1
+iface swp8s1
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp8s2
+iface swp8s2
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp8s3
+iface swp8s3
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+
+ 
+### 25-23
+auto swp25s0
+iface swp25s0
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp25s1
+iface swp25s1
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp25s2
+iface swp25s2
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp25s3
+iface swp25s3
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+
+ 
+auto swp26s0
+iface swp26s0
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp26s1
+iface swp26s1
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp26s2
+iface swp26s2
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp26s3
+iface swp26s3
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+
+ 
+auto swp27s0
+iface swp27s0
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp27s1
+iface swp27s1
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp27s2
+iface swp27s2
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp27s3
+iface swp27s3
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+
+ 
+auto swp28s0
+iface swp28s0
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp28s1
+iface swp28s1
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp28s2
+iface swp28s2
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp28s3
+iface swp28s3
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+
+ 
+auto swp29s0
+iface swp29s0
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp29s1
+iface swp29s1
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp29s2
+iface swp29s2
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp29s3
+iface swp29s3
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+
+ 
+auto swp30s0
+iface swp30s0
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp30s1
+iface swp30s1
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp30s2
+iface swp30s2
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp30s3
+iface swp30s3
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+
+ 
+auto swp31s0
+iface swp31s0
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp31s1
+iface swp31s1
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp31s2
+iface swp31s2
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp31s3
+iface swp31s3
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+
+ 
+auto swp32s0
+iface swp32s0
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp32s1
+iface swp32s1
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp32s2
+iface swp32s2
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+auto swp32s3
+iface swp32s3
+  link-speed 10000
+  link-autoneg off
+  link-duplex full
+  bridge-access 1
+
+
+#megabridge
+auto bridge
+iface bridge
+  bridge-vlan-aware yes
+  bridge-ports swp1s0 swp1s1 swp1s2 swp1s3 swp2s0 swp2s1 swp2s2 swp2s3 swp3s0 swp3s1 swp3s2 swp3s3 swp4s0 swp4s1 swp4s2 swp4s3 swp5s0 swp5s1 swp5s2 swp5s3 swp6s0 swp6s1 swp6s2 swp6s3 swp7s0 swp7s1 swp7s2 swp7s3 swp8s0 swp8s1 swp8s2 swp8s3 swp9swp10swp11swp12swp13swp14swp15swp16swp17swp18swp19swp20swp21swp22swp23swp24swp25s0 swp25s1 swp25s2 swp25s3 swp26s0 swp26s1 swp26s2 swp26s3 swp27s0 swp27s1 swp27s2 swp27s3 swp28s0 swp28s1 swp28s2 swp28s3 swp29s0 swp29s1 swp29s2 swp29s3 swp30s0 swp30s1 swp30s2 swp30s3 swp31s0 swp31s1 swp31s2 swp31s3 swp32s0 swp32s1 swp32s2 swp32s3 
+  bridge-vids 1
+  bridge-stp on

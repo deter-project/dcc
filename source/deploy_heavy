@@ -1,0 +1,24 @@
+#!/bin/sh
+
+rm -rf dcc-pkg
+mkdir -p dcc-pkg
+
+ldd dcc |\
+  awk 'NF == 4 {print $3}; NF == 2 {print $1}' |\
+  xargs cp -t dcc-pkg/
+
+cp dcc dcc-pkg/
+cp ../run.sh dcc-pkg/
+
+scp -r dcc-pkg cumulus@leaf0:~/
+scp -r dcc-pkg cumulus@leaf1:~/
+scp -r dcc-pkg cumulus@leaf2:~/
+scp -r dcc-pkg cumulus@leaf3:~/
+scp -r dcc-pkg cumulus@leaf4:~/
+scp -r dcc-pkg cumulus@leaf5:~/
+scp -r dcc-pkg cumulus@spine0:~/
+scp -r dcc-pkg cumulus@spine1:~/
+scp -r dcc-pkg cumulus@spine2:~/
+scp -r dcc-pkg cumulus@spine3:~/
+
+

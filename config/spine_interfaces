@@ -1,0 +1,242 @@
+#simple 4 port 3 vlan test configuration
+
+#auto lo
+#iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+  address 192.168.254.160
+  netmask 255.255.255.0
+  gateway 192.168.254.254
+
+auto swp1
+iface swp1
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp2
+iface swp2
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp3
+iface swp3
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp4
+iface swp4
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp5
+iface swp5
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp6
+iface swp6
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp7
+iface swp7
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp8
+iface swp8
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp9
+iface swp9
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp10
+iface swp10
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp11
+iface swp11
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp12
+iface swp12
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp13
+iface swp13
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp14
+iface swp14
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp15
+iface swp15
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp16
+iface swp16
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp17
+iface swp17
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp18
+iface swp18
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp19
+iface swp19
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp20
+iface swp20
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp21
+iface swp21
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp22
+iface swp22
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp23
+iface swp23
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp24
+iface swp24
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp25
+iface swp25
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp26
+iface swp26
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp27
+iface swp27
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp28
+iface swp28
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp29
+iface swp29
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp30
+iface swp30
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp31
+iface swp31
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto swp32
+iface swp32
+  link-speed 40000
+  link-autoneg off
+  link-duplex full
+  bridge-vids 1
+
+auto bridge
+iface bridge
+  bridge-vlan-aware yes
+  bridge-ports swp1 swp2 swp3 swp4 swp5 swp6 swp7 swp8 swp9 swp10 swp11 swp12 swp13 swp14 swp15 swp16 swp17 swp18 swp19 swp20 swp21 swp22 swp23 swp24 swp25 swp26 swp27 swp28 swp29 swp30 swp31 swp32
+  bridge-vids 1
+  bridge-stp on
+

@@ -1,0 +1,23 @@
+Source: dcc
+Section: net
+Priority: extra
+Maintainer: Ryan Goodfellow <rgoodfel@isi.edu>
+Build-Depends: libproxygen-dev,
+               libfmt-dev,
+               cmake,
+               ninja-build,
+               augeas-tools,
+               libaugeas-dev,
+               g++(>=4.9),
+               debhelper(>=9)
+Standards-Version: 3.9.8
+Homepage: https://deter-project.org
+
+Package: deter-dcc
+Section: net
+Architecture: amd64
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: deter cumulus linux controller
+ dcc (deter cumulus controller) is a piece of software that operates a cumulus
+ linux switch in a deter environment.
+
